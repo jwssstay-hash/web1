@@ -8,8 +8,15 @@ const HERO_TITLE = 'Where the forest grows quiet and the stars take over.';
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden flex flex-col justify-end pb-16 sm:pb-24">
-      <BoomerangVideoBg src={BG_VIDEO} />
+    <section className="relative w-full min-h-screen overflow-hidden flex flex-col justify-end pb-16 sm:pb-24 bg-woodside-950">
+      <video
+        src={BG_VIDEO}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-woodside-950/30 via-woodside-950/40 to-woodside-950/80" /> 
       
       {/* Hero copy */}

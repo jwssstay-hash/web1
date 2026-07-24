@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 export function FloatingWidgets() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <div className="hidden sm:flex fixed bottom-6 right-6 z-50 flex-col gap-4">
       <a 
         href="https://wa.me/919876543210" 
         target="_blank" 

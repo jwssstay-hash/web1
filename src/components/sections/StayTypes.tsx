@@ -1,150 +1,136 @@
+'use client';
+
 import React from 'react';
-import { Users, Bath, Coffee, Check, Star } from 'lucide-react';
 import Link from 'next/link';
-import { StickyCard001 } from '../ui/StickyCard001';
 
 const stays = [
   {
-    title: "Camp Tent",
-    slug: "camp-tent",
-    description: "The camp tent is 4.5 ft height at entrance and 6/6.5 ft length and breadth.",
-    image: "/Images/Camp/Main.jpeg",
-    capacity: "2 Adults",
-    price: "",
-    badge: "",
-    features: [
-      "Accommodates 2 adults",
-      "Complimentary South Indian veg breakfast",
-      "1 Exclusive restroom per booking"
-    ],
-    icons: [<Users key="1" size={20}/>, <Bath key="2" size={20}/>, <Coffee key="3" size={20}/>]
-  },
-  {
-    title: "Family Tent",
-    slug: "family-tent",
-    description: "Spacious family camping experience with 4 mattresses placed inside the tent.",
-    image: "/Images/Family tent/Main.jpeg",
-    capacity: "4 Adults + 1 Kid",
-    price: "",
-    badge: "Family Friendly",
-    features: [
-      "Accommodates up to 6 adults max",
-      "Fan, light, blankets, and pillows provided",
-      "Complimentary South Indian veg breakfast"
-    ],
-    icons: [<Users key="1" size={20}/>, <Bath key="2" size={20}/>, <Coffee key="3" size={20}/>]
-  },
-  {
     title: "Glass House",
+    subtitle: "For groups that want to stay together",
+    description: "An air-conditioned group space with individual beds, attached restrooms and room for conversations that continue late into the evening.",
     slug: "glass-house",
-    description: "This is an 800 sq ft air-conditioned room with 2 attached restrooms and dressing area.",
-    image: "/Images/Glass Room/Main.jpeg",
-    capacity: "Up to 10 Guests",
-    price: "",
-    badge: "Group Stay",
-    features: [
-      "Air-conditioned (AC) room",
-      "Accommodates up to 10 guests (Single cots provided)",
-      "2 Attached restrooms & dressing area",
-      "Complimentary South Indian veg breakfast"
+    images: [
+      "/Images/Glass Room/Main.jpeg",
+      "/Images/Glass Room/glass-house-group-stay-46.jpeg",
+      "/Images/Glass Room/glass-house-group-stay-50.jpeg"
     ],
-    icons: [<Star key="1" size={20}/>, <Users key="2" size={20}/>, <Bath key="3" size={20}/>]
+    features: ["Up to 10 guests", "AC", "2 attached restrooms", "Breakfast included"],
+    price: "From ₹10,000/night"
   },
   {
-    title: "Cottages",
+    title: "Private Cottages",
+    subtitle: "A quiet room for two",
+    description: "King-sized comfort, a private sit-out and views that gently bring the outdoors in.",
     slug: "cottages",
-    description: "Each cottage is 350 sq ft, air-conditioned with a king size cot and mattress.",
-    image: "/Images/Cottage Rooms/Main.jpeg",
-    capacity: "2-3 Guests",
-    price: "",
-    badge: "Premium Stay",
-    features: [
-      "Air-conditioned with king size cot",
-      "Complimentary South Indian veg breakfast"
+    images: [
+      "/Images/Cottage Rooms/Main.jpeg",
+      "/Images/Cottage Rooms/cottage-rooms-11.jpeg",
+      "/Images/Gallery/cottage-rooms-9.jpeg"
     ],
-    icons: [<Check key="1" size={20}/>, <Bath key="2" size={20}/>, <Coffee key="3" size={20}/>]
+    features: ["2–3 guests", "King bed", "AC", "Ensuite bathroom"],
+    price: "From ₹4,500/night"
+  },
+  {
+    title: "Family Tents",
+    subtitle: "Camping without leaving comfort behind",
+    description: "A spacious tent for families and small groups, with proper mattresses, lighting and a dedicated restroom.",
+    slug: "family-tent",
+    images: [
+      "/Images/Family tent/Main.jpeg",
+      "/Images/Family tent/family-tent-25.jpeg",
+      "/Images/Family tent/family-tent-26.jpeg"
+    ],
+    features: ["Up to 6 guests", "Mattresses provided", "Dedicated restroom", "Breakfast included"],
+    price: "From ₹3,000/night"
+  },
+  {
+    title: "Camp Tents",
+    subtitle: "Simple, close-to-nature camping",
+    description: "Compact tents for couples and friends who want the most immersive outdoor experience.",
+    slug: "camp-tent",
+    images: [
+      "/Images/Camp/Main.jpeg",
+      "/Images/Gallery/camp-tent-and-restroom-5.jpeg",
+      "/Images/Camp/events-and-camp-14.jpeg"
+    ],
+    features: ["2 guests", "Immersive outdoor", "Shared restroom", "Breakfast included"],
+    price: "From ₹1,500/night"
   }
 ];
 
 export function StayTypes() {
   return (
-    <section 
-      id="stays" 
-      className="relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: 'url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260611_133301_d5f2a94a-b22e-4e4a-a6b6-eacdddf1f5b0.png&w=1280&q=85")'
-      }}
-    >
-      {/* Grass Overlay */}
-      <img
-        src="https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1781191264/grass_eam204.png"
-        className="pointer-events-none absolute bottom-0 left-0 z-10 w-full select-none opacity-50"
-        alt=""
-      />
-      <div className="container mx-auto px-6 md:px-12 relative z-20 pt-24 md:pt-32">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-woodside-900 mb-4 drop-shadow-sm">
-            Curated Stays
+    <section id="stays" className="py-24 md:py-32 bg-woodside-50 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="text-left mb-16 md:mb-20">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-woodside-950 mb-4 tracking-tight">
+            Choose how you would like to stay
           </h2>
-          <p className="text-woodside-900/90 font-bold tracking-widest uppercase text-sm drop-shadow-sm">
-            Find your perfect escape
-          </p>
+          <div className="w-16 h-px bg-woodside-900/30 mt-8"></div>
         </div>
-      </div>
 
-      <div className="relative z-20">
-        <StickyCard001 
-          cards={stays.map((stay, idx) => (
-            <div
-              key={idx}
-              className="bg-white/40 backdrop-blur-xl border border-white/60 rounded-3xl overflow-hidden shadow-2xl h-full w-full flex flex-col md:flex-row"
-            >
-              <Link href={`/stays/${stay.slug}`} className="relative h-1/2 md:h-full md:w-1/2 overflow-hidden group shrink-0 block">
-                <img 
-                  src={stay.image} 
-                  alt={stay.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {stay.badge && (
-                  <div className="absolute top-4 right-4 md:left-4 md:right-auto bg-woodside-800/90 backdrop-blur-sm text-white text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-lg">
-                    {stay.badge}
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-woodside-950/80 via-transparent to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
-                <div className="absolute bottom-4 left-6 right-6 flex justify-between items-end">
-                  <h3 className="text-3xl font-serif text-white">{stay.title}</h3>
-                </div>
-              </Link>
+        <div className="space-y-16 md:space-y-24">
+          {stays.map((stay, index) => (
+            <div key={index} className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               
-              <div className="flex flex-col h-1/2 md:h-full md:w-1/2 relative z-10 pointer-events-auto">
-                <div className="px-5 py-4 md:p-10 flex-1 overflow-hidden pb-16 md:pb-24">
-                  <div className="flex justify-between items-start mb-3 md:mb-6">
-                    <p className="text-woodside-900 font-medium text-sm md:text-lg leading-relaxed flex-1 line-clamp-2 md:line-clamp-none">{stay.description}</p>
-                    <p className="text-woodside-900 font-serif text-xl font-bold whitespace-nowrap ml-4">{stay.price}</p>
-                  </div>
-                  
-                  <div className="space-y-2 md:space-y-4">
-                    {stay.features.map((feature, fidx) => (
-                      <div key={fidx} className="flex items-start gap-2 md:gap-3">
-                        <Check className="w-4 h-4 md:w-5 md:h-5 text-woodside-700 shrink-0 mt-0.5 md:mt-0.5" />
-                        <span className="text-woodside-900/90 font-medium text-xs md:text-base leading-tight md:leading-normal">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+              {/* Image Grid/Carousel Simulation */}
+              <div className={`relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl group ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
+                {/* Main image */}
+                <img 
+                  src={stay.images[0]} 
+                  alt={stay.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                
+                {/* Mini gallery overlay at bottom */}
+                <div className="absolute bottom-4 left-4 right-4 flex gap-2 overflow-x-auto snap-x hide-scrollbar">
+                  {stay.images.slice(1).map((img, i) => (
+                    <div key={i} className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 border-white/50 shadow-md shrink-0 snap-start">
+                      <img src={img} alt="" className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className="flex flex-col space-y-6">
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-woodside-950 mb-2">{stay.title}</h3>
+                  <p className="text-woodside-700 font-medium tracking-wide uppercase text-sm">{stay.subtitle}</p>
+                </div>
+                
+                <p className="text-woodside-800 font-light leading-relaxed text-lg">
+                  {stay.description}
+                </p>
+
+                <div className="flex flex-wrap gap-x-6 gap-y-3 pt-4 border-t border-woodside-900/10">
+                  {stay.features.map((feature, fidx) => (
+                    <div key={fidx} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-woodside-600"></div>
+                      <span className="text-woodside-900 text-sm font-medium">{feature}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 px-6 py-4 md:px-10 md:py-6 border-t border-woodside-900/20 flex justify-between items-center shrink-0 bg-white/50 backdrop-blur-xl z-20">
-                  <div className="flex gap-4 text-woodside-800">
-                    {stay.icons}
-                  </div>
-                  <Link href={`/stays/${stay.slug}`} className="relative z-50 text-sm md:text-base font-bold tracking-wider uppercase text-woodside-900 hover:text-woodside-700 transition-colors underline underline-offset-4 cursor-pointer">
-                    View Details
+                <div className="pt-6 flex flex-col sm:flex-row items-center gap-4">
+                  <Link 
+                    href={`/stays/${stay.slug}`}
+                    className="w-full sm:w-auto bg-woodside-950 text-white px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-woodside-900 transition-colors text-center shadow-lg"
+                  >
+                    Explore this stay
+                  </Link>
+                  <Link 
+                    href="/booking"
+                    className="w-full sm:w-auto bg-transparent border border-woodside-950 text-woodside-950 px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-woodside-50 transition-colors text-center"
+                  >
+                    Check availability
                   </Link>
                 </div>
               </div>
+
             </div>
           ))}
-        />
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MobileBottomBar } from "@/components/ui/MobileBottomBar";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://website.jwssstay-hash.pages.dev'),
@@ -89,6 +90,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-woodside-950 text-slate-50 selection:bg-woodside-600 selection:text-white">
         {children}
+        <MobileBottomBar />
       </body>
     </html>
   );

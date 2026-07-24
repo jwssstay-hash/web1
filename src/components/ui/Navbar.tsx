@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, CalendarCheck } from 'lucide-react';
+import { Menu, X, Phone, CalendarCheck, MessageCircle } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Navbar() {
@@ -20,8 +20,13 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
+    { href: '/stays', label: 'Stay' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/food', label: 'Food' },
+    { href: '/story', label: 'Our Story' },
+    { href: '/explore', label: 'Explore Jawadhu' },
     { href: '/gallery', label: 'Gallery' },
-    { href: '/events', label: 'Events' },
+    { href: '/booking', label: 'Plan Your Stay' },
   ];
 
   return (
@@ -31,27 +36,24 @@ export function Navbar() {
           <Logo variant="light" className="h-8" />
         </div>
 
-        <div className="hidden lg:flex items-center gap-1 bg-white/70 backdrop-blur-md rounded-full pl-6 pr-1 py-1 shadow-sm border border-white/60">
-          {navLinks.map((link, i) => (
+        <div className="hidden lg:flex items-center gap-1 bg-white/70 backdrop-blur-md rounded-full px-4 py-1.5 shadow-sm border border-white/60">
+          {navLinks.map((link) => (
              <a
               key={link.href}
               href={link.href}
-              className={`text-sm px-3 py-2 transition-colors ${
-                i === 0 ? 'font-semibold text-woodside-950' : 'font-medium text-woodside-600 hover:text-woodside-950'
-              }`}
+              className="text-[13px] font-medium text-woodside-950/80 hover:text-woodside-950 px-3 py-1.5 transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <a href="/booking" className="ml-2 bg-woodside-950 hover:bg-woodside-900 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-md">
-            Book Now
-          </a>
         </div>
 
-        <div className="flex items-center gap-3 sm:gap-6 text-white drop-shadow-md">
-          <a href="tel:+919840741075" className="hidden sm:flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity">
-            <Phone className="w-4 h-4" />
-            Contact
+        <div className="flex items-center gap-3 sm:gap-4 text-white drop-shadow-md">
+          <a href="https://wa.me/919840741075" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366] text-white hover:opacity-90 transition-opacity shadow-lg">
+            <MessageCircle className="w-5 h-5" />
+          </a>
+          <a href="/booking" className="hidden sm:flex bg-white hover:bg-woodside-50 text-woodside-950 text-sm font-semibold px-6 py-2.5 rounded-full transition-colors items-center shadow-lg">
+            Check Availability
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}

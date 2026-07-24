@@ -3,7 +3,7 @@
 import React from 'react';
 import BoomerangVideoBg from '../ui/BoomerangVideoBg';
 
-const BG_VIDEO = 'https://res.cloudinary.com/demo/video/upload/v1642142491/docs/nature_loop.mp4';
+const BG_VIDEO = 'https://res.cloudinary.com/bali5bin/video/upload/v1784915389/drone_tiseph.mp4';
 const HERO_TITLE = 'Where the forest grows quiet and the stars take over.';
 
 export function Hero() {

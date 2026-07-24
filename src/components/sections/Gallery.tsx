@@ -11,7 +11,7 @@ const defaultGalleryImages = [
   { src: "/Images/Cottage Rooms/cottage-rooms-10.jpeg", title: "Cottages", category: "Cottages", colSpan: "col-span-1", rowSpan: "row-span-2" },
   { src: "/Images/Family tent/family-tent-30.jpeg", title: "Family Tent", category: "Family Tents", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
   { src: "/Images/Camp/events-and-camp-24.jpeg", title: "Camp", category: "Camp Tents", colSpan: "col-span-1", rowSpan: "row-span-1" },
-  { src: "/videos/drone.mp4", title: "Drone View", category: "Videos", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2", type: "video" },
+  { src: "https://res.cloudinary.com/demo/video/upload/v1642142491/docs/nature_loop.mp4", title: "Drone View", category: "Videos", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2", type: "video" },
   { src: "/Images/General Farm Photos/general-farm-photos-42.jpeg", title: "Night Sky", category: "Stargazing", colSpan: "col-span-1", rowSpan: "row-span-2" },
   { src: "/Images/General Farm Photos/general-farm-photos-35.jpeg", title: "Food", category: "Food", colSpan: "col-span-1", rowSpan: "row-span-1" },
   { src: "/Images/Cottage Rooms/Main.jpeg", title: "Cottage Exterior", category: "Cottages", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },

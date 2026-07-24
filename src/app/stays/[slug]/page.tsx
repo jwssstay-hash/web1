@@ -192,7 +192,7 @@ export default async function StayPage({ params }: { params: Promise<{ slug: str
               </h3>
               <ul className="space-y-4">
                 {stay.toKnow.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-3 text-woodside-700">
+                  <li key={i} className="flex items-start gap-3 text-woodside-900/80">
                     <div className="w-1.5 h-1.5 rounded-full bg-woodside-400 mt-2 shrink-0"></div>
                     <span className="leading-relaxed">{item}</span>
                   </li>

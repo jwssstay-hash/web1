@@ -158,7 +158,7 @@ export default async function StayPage({ params }: { params: Promise<{ slug: str
                 </div>
                 <div className="flex items-center gap-4 text-woodside-800">
                   <Wind className="text-woodside-600" />
-                  <span><strong>Cooling:</strong> {stay.ac}</span>
+                  <span><strong>Comfort:</strong> {stay.ac}</span>
                 </div>
                 <div className="flex items-center gap-4 text-woodside-800">
                   <Coffee className="text-woodside-600" />

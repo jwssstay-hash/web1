@@ -43,9 +43,15 @@ export function FoodAndHospitality({ hideButton = false }: { hideButton?: boolea
               Food that feels familiar
             </h2>
             
-            <p className="text-lg md:text-xl font-light text-woodside-800 leading-relaxed">
-              The finest ingredient in every meal isn’t found in the recipe—it’s the time, care and warmth with which it’s prepared.
-            </p>
+            <div className="space-y-4 text-lg md:text-xl font-light text-woodside-800 leading-relaxed">
+              <p>Breakfast is complimentary.</p>
+              <p>
+                <strong>Lunch and Dinner:</strong> The finest ingredient in every meal isn’t found in the recipe—it’s the time, care and warmth with which it’s prepared.
+              </p>
+              <p className="text-base text-woodside-700 italic mt-2">
+                * Request for lunch and dinner to be pre-booked.
+              </p>
+            </div>
             
             <div className="w-12 h-px bg-woodside-900/30"></div>
             

@@ -60,13 +60,19 @@ export function FoodAndHospitality({ hideButton = false }: { hideButton?: boolea
                 <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Filter coffee
               </li>
               <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Breakfast spread
+                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Breakfast
               </li>
               <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Plantain-leaf meals
+                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Lunch
               </li>
               <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Campfire snacks
+                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Snacks
+              </li>
+              <li className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Barbeque / camp fire snacks
+              </li>
+              <li className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-woodside-700"></div> Dinner
               </li>
             </ul>
 

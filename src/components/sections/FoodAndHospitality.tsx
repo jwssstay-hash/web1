@@ -44,7 +44,7 @@ export function FoodAndHospitality({ hideButton = false }: { hideButton?: boolea
             </h2>
             
             <p className="text-lg md:text-xl font-light text-woodside-800 leading-relaxed">
-              Breakfast is included, and lunch and dinner can be prepared with advance notice. Our kitchen serves comforting South Indian meals, local favourites and simple food made for sharing—often with ingredients sourced from the farm and nearby villages.
+              The finest ingredient in every meal isn’t found in the recipe—it’s the time, care and warmth with which it’s prepared.
             </p>
             
             <div className="w-12 h-px bg-woodside-900/30"></div>

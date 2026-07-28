@@ -7,7 +7,6 @@ const atWoodside = [
   "Stargazing",
   "Farm and orchard walks",
   "Campfire",
-  "Village walks",
   "Quiet reading",
   "Outdoor meals",
   "Children's farm experiences",

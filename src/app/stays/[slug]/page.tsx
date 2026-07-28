@@ -209,16 +209,9 @@ export default async function StayPage({ params }: { params: Promise<{ slug: str
               <p className="font-serif text-xl mb-8">{stay.idealFor}</p>
               
               <div className="pt-8 border-t border-woodside-800">
-                <p className="text-woodside-300 text-sm mb-1">Starting from</p>
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-4xl font-bold font-serif">{stay.price}</span>
-                  <span className="text-woodside-400 font-light">/ night</span>
-                </div>
-                
-                <Link href="/booking" className="block text-center w-full bg-white text-woodside-950 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-woodside-100 transition-colors shadow-lg mb-4">
+                <Link href="/booking" className="block text-center w-full bg-white text-woodside-950 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-woodside-100 transition-colors shadow-lg mb-2 mt-4">
                   Check Availability
                 </Link>
-                <p className="text-center text-xs text-woodside-400">Includes taxes & breakfast.</p>
               </div>
             </div>
           </div>

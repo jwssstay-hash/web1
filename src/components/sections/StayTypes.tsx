@@ -14,8 +14,7 @@ const stays = [
       "/Images/Glass Room/glass-house-group-stay-46.jpeg",
       "/Images/Glass Room/glass-house-group-stay-50.jpeg"
     ],
-    features: ["Up to 10 guests", "AC", "2 attached restrooms", "Breakfast included"],
-    price: "From ₹10,000/night"
+    features: ["Up to 10 guests", "AC", "2 attached restrooms", "Breakfast included"]
   },
   {
     title: "Private Cottages",
@@ -27,8 +26,7 @@ const stays = [
       "/Images/Cottage Rooms/cottage-rooms-11.jpeg",
       "/Images/Gallery/cottage-rooms-9.jpeg"
     ],
-    features: ["2–3 guests", "King bed", "AC", "Ensuite bathroom"],
-    price: "From ₹4,500/night"
+    features: ["2–3 guests", "King bed", "AC", "Ensuite bathroom"]
   },
   {
     title: "Family Tents",
@@ -40,8 +38,7 @@ const stays = [
       "/Images/Family tent/family-tent-25.jpeg",
       "/Images/Family tent/family-tent-26.jpeg"
     ],
-    features: ["Up to 6 guests", "Mattresses provided", "Dedicated restroom", "Breakfast included"],
-    price: "From ₹3,000/night"
+    features: ["Up to 6 guests", "Mattresses provided", "Dedicated restroom", "Breakfast included"]
   },
   {
     title: "Camp Tents",
@@ -53,8 +50,7 @@ const stays = [
       "/Images/Gallery/camp-tent-and-restroom-5.jpeg",
       "/Images/Camp/events-and-camp-14.jpeg"
     ],
-    features: ["2 guests", "Immersive outdoor", "Shared restroom", "Breakfast included"],
-    price: "From ₹1,500/night"
+    features: ["2 guests", "Immersive outdoor", "Shared restroom", "Breakfast included"]
   }
 ];
 

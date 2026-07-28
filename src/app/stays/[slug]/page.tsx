@@ -53,7 +53,7 @@ const stayMap: Record<string, any> = {
     parking: 'Dedicated parking',
     price: '₹8,500',
     inclusions: ['AC', 'Dressing area', 'Private group space', 'Breakfast', 'Campfire on request'],
-    toKnow: ['Advance meal pre-booking required', 'Respect quiet hours outside the building', 'Power backup available']
+    toKnow: ['Advance meal pre-booking required', 'Respect quiet hours outside the building', 'Private lawn available']
   },
   'cottages': {
     title: 'Private Cottages',

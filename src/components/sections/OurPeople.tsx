@@ -33,7 +33,7 @@ export function OurPeople() {
             A place remembered for its people
           </h2>
           <p className="text-woodside-800 font-light text-lg md:text-xl max-w-2xl mx-auto">
-            Competitors can build cottages, but they cannot recreate the warmth of our team.
+            A stay is defined not just by the place, but by the people who make you feel at home.
           </p>
           <div className="w-16 h-px bg-woodside-900/30 mx-auto mt-8"></div>
         </div>

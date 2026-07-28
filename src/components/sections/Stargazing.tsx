@@ -25,7 +25,7 @@ export function Stargazing() {
             </h2>
             
             <p className="text-lg md:text-xl font-light text-woodside-100 leading-relaxed mb-10 drop-shadow-md max-w-lg">
-              Woodside Serene is amidst the Vainu Bappu Observatory and the forest. On clear nights, guests can step away from artificial light and experience a sky rarely visible from the city.
+              Nestled close to the renowned Vainu Bappu Observatory, Woodside Serene offers an escape into one of Tamil Nadu’s finest stargazing destinations. Away from the city’s bright lights, clear nights reveal a breathtaking canopy of stars, creating an unforgettable celestial experience.
             </p>
             
             <ul className="space-y-4">

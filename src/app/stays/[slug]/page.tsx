@@ -20,7 +20,9 @@ const stayMap: Record<string, any> = {
     breakfast: 'Included (South Indian veg)',
     parking: 'Near reception',
     inclusions: ['Mattresses', 'Blankets & Pillows', 'Breakfast', 'Access to common areas', 'Campfire on request'],
-    toKnow: ['Power backup available in common areas', 'Quiet hours after 10 PM', 'Subject to weather conditions', 'No WiFi - reconnect with nature']
+    toKnow: ['Power backup available in common areas', 'Quiet hours after 10 PM', 'Subject to weather conditions', 'No WiFi - reconnect with nature'],
+    bookingCategory: 'Tent Stay',
+    bookingStay: 'Camp Tent'
   },
   'family-tent': {
     title: 'Family Tent',
@@ -35,7 +37,9 @@ const stayMap: Record<string, any> = {
     breakfast: 'Included (South Indian veg)',
     parking: 'Near reception',
     inclusions: ['4 Mattresses', 'Blankets & Pillows', 'Fan & Lighting', 'Breakfast', 'Campfire on request'],
-    toKnow: ['Power backup for lighting', 'Quiet hours after 10 PM', 'No WiFi', 'Safe and secure farm environment']
+    toKnow: ['Power backup for lighting', 'Quiet hours after 10 PM', 'No WiFi', 'Safe and secure farm environment'],
+    bookingCategory: 'Tent Stay',
+    bookingStay: 'Family Tent'
   },
   'glass-house': {
     title: 'Glass House',
@@ -50,7 +54,9 @@ const stayMap: Record<string, any> = {
     breakfast: 'Included (South Indian veg)',
     parking: 'Dedicated parking',
     inclusions: ['AC', 'Dressing area', 'Private group space', 'Breakfast', 'Campfire on request'],
-    toKnow: ['Advance meal pre-booking required', 'Respect quiet hours outside the building', 'Private lawn available']
+    toKnow: ['Advance meal pre-booking required', 'Respect quiet hours outside the building', 'Private lawn available'],
+    bookingCategory: 'Room Stay',
+    bookingStay: 'Glass House'
   },
   'cottages': {
     title: 'Private Cottages',
@@ -65,7 +71,9 @@ const stayMap: Record<string, any> = {
     breakfast: 'Included (South Indian veg)',
     parking: 'Available',
     inclusions: ['King size bed', 'AC', 'private sitout with sunset view', 'Breakfast', 'Extra cot on request'],
-    toKnow: ['Food pre-booking required', 'Sunset view', 'Very quiet surroundings']
+    toKnow: ['Food pre-booking required', 'Sunset view', 'Very quiet surroundings'],
+    bookingCategory: 'Room Stay',
+    bookingStay: 'Cottages'
   },
 };
 
@@ -205,7 +213,7 @@ export default async function StayPage({ params }: { params: Promise<{ slug: str
               <p className="font-serif text-xl mb-8">{stay.idealFor}</p>
               
               <div className="pt-8 border-t border-woodside-800">
-                <Link href="/booking" className="block text-center w-full bg-white text-woodside-950 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-woodside-100 transition-colors shadow-lg mb-2 mt-4">
+                <Link href={`/booking?category=${encodeURIComponent(stay.bookingCategory)}&stay=${encodeURIComponent(stay.bookingStay)}`} className="block text-center w-full bg-white text-woodside-950 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-woodside-100 transition-colors shadow-lg mb-2 mt-4">
                   Check Availability
                 </Link>
               </div>

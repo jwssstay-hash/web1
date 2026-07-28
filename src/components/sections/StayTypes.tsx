@@ -14,7 +14,9 @@ const stays = [
       "/Images/Glass Room/glass-house-group-stay-46.jpeg",
       "/Images/Glass Room/glass-house-group-stay-50.jpeg"
     ],
-    features: ["Up to 10 guests", "AC", "2 attached restrooms", "Breakfast included"]
+    features: ["Up to 10 guests", "AC", "2 attached restrooms", "Breakfast included"],
+    bookingCategory: 'Room Stay',
+    bookingStay: 'Glass House'
   },
   {
     title: "Private Cottages",
@@ -26,7 +28,9 @@ const stays = [
       "/Images/Cottage Rooms/cottage-rooms-11.jpeg",
       "/Images/Gallery/cottage-rooms-9.jpeg"
     ],
-    features: ["2–3 guests", "King size bed", "AC", "Ensuite bathroom"]
+    features: ["2–3 guests", "King size bed", "AC", "Ensuite bathroom"],
+    bookingCategory: 'Room Stay',
+    bookingStay: 'Cottages'
   },
   {
     title: "Family Tents",
@@ -38,7 +42,9 @@ const stays = [
       "/Images/Family tent/family-tent-25.jpeg",
       "/Images/Family tent/family-tent-26.jpeg"
     ],
-    features: ["Up to 6 guests", "Mattresses provided", "Dedicated restroom", "Breakfast included"]
+    features: ["Up to 6 guests", "Mattresses provided", "Dedicated restroom", "Breakfast included"],
+    bookingCategory: 'Tent Stay',
+    bookingStay: 'Family Tent'
   },
   {
     title: "Camp Tents",
@@ -50,7 +56,9 @@ const stays = [
       "/Images/Gallery/camp-tent-and-restroom-5.jpeg",
       "/Images/Camp/events-and-camp-14.jpeg"
     ],
-    features: ["2 guests", "Immersive outdoor", "Shared restroom", "Breakfast included"]
+    features: ["2 guests", "Immersive outdoor", "Shared restroom", "Breakfast included"],
+    bookingCategory: 'Tent Stay',
+    bookingStay: 'Camp Tent'
   }
 ];
 
@@ -116,7 +124,7 @@ export function StayTypes() {
                     Explore this stay
                   </Link>
                   <Link 
-                    href="/booking"
+                    href={`/booking?category=${encodeURIComponent(stay.bookingCategory)}&stay=${encodeURIComponent(stay.bookingStay)}`}
                     className="w-full sm:w-auto bg-transparent border border-woodside-950 text-woodside-950 px-8 py-3.5 rounded-full font-semibold text-sm hover:bg-woodside-50 transition-colors text-center"
                   >
                     Check availability

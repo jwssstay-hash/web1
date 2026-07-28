@@ -19,7 +19,6 @@ const stayMap: Record<string, any> = {
     ac: 'No AC (Nature cooled)',
     breakfast: 'Included (South Indian veg)',
     parking: 'Near reception',
-    price: '₹1,500',
     inclusions: ['Mattresses', 'Blankets & Pillows', 'Breakfast', 'Access to common areas', 'Campfire on request'],
     toKnow: ['Power backup available in common areas', 'Quiet hours after 10 PM', 'Subject to weather conditions', 'No WiFi - reconnect with nature']
   },
@@ -35,7 +34,6 @@ const stayMap: Record<string, any> = {
     ac: 'Fan & Light provided',
     breakfast: 'Included (South Indian veg)',
     parking: 'Near reception',
-    price: '₹3,500',
     inclusions: ['4 Mattresses', 'Blankets & Pillows', 'Fan & Lighting', 'Breakfast', 'Campfire on request'],
     toKnow: ['Power backup for lighting', 'Quiet hours after 10 PM', 'No WiFi', 'Safe and secure farm environment']
   },
@@ -51,7 +49,6 @@ const stayMap: Record<string, any> = {
     ac: 'Air Conditioned',
     breakfast: 'Included (South Indian veg)',
     parking: 'Dedicated parking',
-    price: '₹8,500',
     inclusions: ['AC', 'Dressing area', 'Private group space', 'Breakfast', 'Campfire on request'],
     toKnow: ['Advance meal pre-booking required', 'Respect quiet hours outside the building', 'Private lawn available']
   },
@@ -67,7 +64,6 @@ const stayMap: Record<string, any> = {
     ac: 'Airconditioned',
     breakfast: 'Included (South Indian veg)',
     parking: 'Available',
-    price: '₹4,500',
     inclusions: ['King size bed', 'AC', 'private sitout with sunset view', 'Breakfast', 'Extra cot on request'],
     toKnow: ['Food pre-booking required', 'Sunset view', 'Very quiet surroundings']
   },

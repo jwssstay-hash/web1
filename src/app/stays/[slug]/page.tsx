@@ -68,7 +68,7 @@ const stayMap: Record<string, any> = {
     breakfast: 'Included (South Indian veg)',
     parking: 'Near cottage',
     price: '₹4,500',
-    inclusions: ['King bed', 'AC', 'Private sit-out', 'Breakfast', 'Extra cot on request'],
+    inclusions: ['King size bed', 'AC', 'Private sit-out', 'Breakfast', 'Extra cot on request'],
     toKnow: ['Food pre-booking required', 'Power backup available', 'Very quiet surroundings', 'Limited mobile network in some spots']
   },
 };

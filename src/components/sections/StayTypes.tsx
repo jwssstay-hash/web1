@@ -26,7 +26,7 @@ const stays = [
       "/Images/Cottage Rooms/cottage-rooms-11.jpeg",
       "/Images/Gallery/cottage-rooms-9.jpeg"
     ],
-    features: ["2–3 guests", "King bed", "AC", "Ensuite bathroom"]
+    features: ["2–3 guests", "King size bed", "AC", "Ensuite bathroom"]
   },
   {
     title: "Family Tents",

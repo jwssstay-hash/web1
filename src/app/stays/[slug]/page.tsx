@@ -64,11 +64,11 @@ const stayMap: Record<string, any> = {
     bed: 'King size cot',
     size: '350 Sq ft',
     bath: 'Attached bathroom',
-    ac: 'Air Conditioned',
+    ac: 'Airconditioned',
     breakfast: 'Included (South Indian veg)',
-    parking: 'Near cottage',
+    parking: 'Available',
     price: '₹4,500',
-    inclusions: ['King size bed', 'AC', 'Private sit-out', 'Breakfast', 'Extra cot on request'],
+    inclusions: ['King size bed', 'AC', 'private sitout with sunset view', 'Breakfast', 'Extra cot on request'],
     toKnow: ['Food pre-booking required', 'Power backup available', 'Very quiet surroundings', 'Limited mobile network in some spots']
   },
 };

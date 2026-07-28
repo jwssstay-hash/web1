@@ -58,7 +58,7 @@ export function ThingsToDo() {
           {/* At Woodside Serene */}
           <div className="lg:col-span-5 bg-woodside-900/50 border border-woodside-800/50 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-sm">
             <h3 className="text-2xl font-serif font-bold text-white mb-8 flex items-center gap-3">
-              <Sparkles className="w-6 h-6 text-woodside-400" />
+              <img src="/logo.png" alt="Woodside Serene Logo" className="h-10 w-auto object-contain brightness-0 invert" />
               At Woodside Serene
             </h3>
             <ul className="space-y-5">

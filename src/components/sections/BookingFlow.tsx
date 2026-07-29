@@ -40,7 +40,7 @@ export function Booking() {
     
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
+      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
 
       await addDoc(collection(db, 'bookings'), {
         ...formData,

@@ -81,7 +81,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, getDocs, query, orderBy } = await import('firebase/firestore');
+      const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
       const q = query(collection(db, 'bookings'), orderBy('createdAt', 'desc'));
       const snapshot = await getDocs(q);
       setBookings(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
@@ -99,7 +99,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { deleteDoc, doc } = await import('firebase/firestore');
+      const { deleteDoc, doc } = await import('firebase/firestore/lite');
       
       const deletePromises = Array.from(selectedBookings).map(id => deleteDoc(doc(db, 'bookings', id)));
       await Promise.all(deletePromises);
@@ -119,7 +119,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { deleteDoc, doc } = await import('firebase/firestore');
+      const { deleteDoc, doc } = await import('firebase/firestore/lite');
       
       const deletePromises = bookings.map(b => deleteDoc(doc(db, 'bookings', b.id)));
       await Promise.all(deletePromises);
@@ -136,7 +136,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, getDocs, query, orderBy } = await import('firebase/firestore');
+      const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
       const q = query(collection(db, 'events'), orderBy('createdAt', 'desc'));
       const snapshot = await getDocs(q);
       setEvents(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
@@ -150,7 +150,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, getDocs, query, orderBy } = await import('firebase/firestore');
+      const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
       const q = query(collection(db, 'gallery'), orderBy('createdAt', 'desc'));
       const snapshot = await getDocs(q);
       setGallery(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
@@ -164,7 +164,7 @@ export default function AdminPage() {
     setIsLoading(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, getDocs, query, orderBy, addDoc, serverTimestamp } = await import('firebase/firestore');
+      const { collection, getDocs, query, orderBy, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
       const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
       const snapshot = await getDocs(q);
       
@@ -192,7 +192,7 @@ export default function AdminPage() {
     if (!confirm('Are you sure you want to delete this?')) return;
     try {
       const { db } = await import('@/lib/firebase');
-      const { deleteDoc, doc } = await import('firebase/firestore');
+      const { deleteDoc, doc } = await import('firebase/firestore/lite');
       await deleteDoc(doc(db, collectionName, id));
       fetchFn();
     } catch (error) {
@@ -241,7 +241,7 @@ export default function AdminPage() {
     setIsSubmittingEvent(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, addDoc, doc, updateDoc, serverTimestamp } = await import('firebase/firestore');
+      const { collection, addDoc, doc, updateDoc, serverTimestamp } = await import('firebase/firestore/lite');
       
       if (editingEventId) {
         await updateDoc(doc(db, 'events', editingEventId), { ...eventForm });
@@ -265,7 +265,7 @@ export default function AdminPage() {
     setIsSubmittingStory(true);
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, addDoc, doc, updateDoc, serverTimestamp } = await import('firebase/firestore');
+      const { collection, addDoc, doc, updateDoc, serverTimestamp } = await import('firebase/firestore/lite');
       
       if (editingStoryId) {
         await updateDoc(doc(db, 'testimonials', editingStoryId), { ...storyForm });
@@ -295,7 +295,7 @@ export default function AdminPage() {
     if (url) {
       try {
         const { db } = await import('@/lib/firebase');
-        const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
+        const { collection, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
         await addDoc(collection(db, 'gallery'), {
           src: url,
           title: galleryTitle || 'Gallery Image',

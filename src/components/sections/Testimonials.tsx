@@ -16,7 +16,7 @@ export function Testimonials() {
     const fetchStories = async () => {
       try {
         const { db } = await import('@/lib/firebase');
-        const { collection, getDocs, query, orderBy } = await import('firebase/firestore');
+        const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
         const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
         const snapshot = await getDocs(q);
         const fetched = snapshot.docs.map(doc => doc.data());

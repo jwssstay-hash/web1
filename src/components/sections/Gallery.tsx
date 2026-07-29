@@ -29,7 +29,7 @@ export function Gallery() {
     const fetchCustomGallery = async () => {
       try {
         const { db } = await import('@/lib/firebase');
-        const { collection, query, orderBy, getDocs } = await import('firebase/firestore');
+        const { collection, query, orderBy, getDocs } = await import('firebase/firestore/lite');
 
         const q = query(collection(db, 'gallery'), orderBy('createdAt', 'desc'));
         const snapshot = await getDocs(q);

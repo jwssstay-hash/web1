@@ -63,7 +63,7 @@ export default function MigratePage() {
     
     try {
       const { db } = await import('@/lib/firebase');
-      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
+      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
 
       for (let i = 0; i < imagesToMigrate.length; i++) {
         const img = imagesToMigrate[i];

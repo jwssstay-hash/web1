@@ -9,7 +9,7 @@ const groups = [
     title: "Families",
     icon: <Baby className="w-8 h-8 text-woodside-200 mb-6" />,
     desc: "Safe, open spaces for children to run, and comfortable accommodations where multiple generations can unwind together.",
-    image: "/Images/Family tent/family-tent-30.jpeg",
+    image: "/Images/Family tent/Main.jpeg",
     link: "/stays/family-tent"
   },
   {

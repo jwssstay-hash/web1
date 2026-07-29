@@ -1,5 +1,5 @@
-import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
+// Removed static imports to prevent SSR bundling
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCIXl8zBAziXl610MX9wbFUfQvO3mwQuQo",
@@ -11,8 +11,18 @@ const firebaseConfig = {
   measurementId: "G-6HQP9HXLJR"
 };
 
-// Initialize Firebase only if it hasn't been initialized already (important for Next.js hot-reloading)
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+// Firebase is massive and crashes the Cloudflare Worker size limits if bundled on the server.
+// We must ensure Firebase is ONLY initialized on the client side.
+let app: any = null;
+let db: any = null;
 
-// Export the Firestore database instance
-export const db = getFirestore(app);
+if (typeof window !== "undefined") {
+  // We use dynamic require to absolutely prevent server-side bundling of the SDK
+  const { initializeApp, getApps, getApp } = require("firebase/app");
+  const { getFirestore } = require("firebase/firestore/lite");
+  
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+  db = getFirestore(app);
+}
+
+export { app, db };

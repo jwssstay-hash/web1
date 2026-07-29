@@ -4,7 +4,15 @@ import React from 'react';
 import Link from 'next/link';
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
-import { Telescope, Leaf, Flame, Utensils, Map, Baby, Gift, Briefcase, ChevronRight } from 'lucide-react';
+import Telescope from 'lucide-react/dist/esm/icons/telescope';
+import Leaf from 'lucide-react/dist/esm/icons/leaf';
+import Flame from 'lucide-react/dist/esm/icons/flame';
+import Utensils from 'lucide-react/dist/esm/icons/utensils';
+import Map from 'lucide-react/dist/esm/icons/map';
+import Baby from 'lucide-react/dist/esm/icons/baby';
+import Gift from 'lucide-react/dist/esm/icons/gift';
+import Briefcase from 'lucide-react/dist/esm/icons/briefcase';
+import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right';
 
 const experiences = [
   {

@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Sparkles } from 'lucide-react';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Sparkles from 'lucide-react/dist/esm/icons/sparkles';
 
 const atWoodside = [
   "Stargazing",

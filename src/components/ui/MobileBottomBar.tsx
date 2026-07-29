@@ -1,7 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Phone, MessageCircle, CalendarCheck } from 'lucide-react';
+import Phone from 'lucide-react/dist/esm/icons/phone';
+import MessageCircle from 'lucide-react/dist/esm/icons/message-circle';
+import CalendarCheck from 'lucide-react/dist/esm/icons/calendar-check';
 
 export function MobileBottomBar() {
   return (

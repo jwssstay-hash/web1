@@ -1,7 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, CalendarCheck, MessageCircle } from 'lucide-react';
+import Menu from 'lucide-react/dist/esm/icons/menu';
+import X from 'lucide-react/dist/esm/icons/x';
+import Phone from 'lucide-react/dist/esm/icons/phone';
+import CalendarCheck from 'lucide-react/dist/esm/icons/calendar-check';
+import MessageCircle from 'lucide-react/dist/esm/icons/message-circle';
 import { Logo } from './Logo';
 
 export function Navbar() {

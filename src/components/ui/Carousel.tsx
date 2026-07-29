@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import ChevronLeftIcon from 'lucide-react/dist/esm/icons/chevron-left-icon';
+import ChevronRightIcon from 'lucide-react/dist/esm/icons/chevron-right-icon';
 import React from "react";
 import {
   Autoplay,

@@ -1,7 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Lock, LogOut, Calendar, Users, ImagePlus, Loader2, Trash2, Image as ImageIcon, MessageSquare, Edit2 } from 'lucide-react';
+import Lock from 'lucide-react/dist/esm/icons/lock';
+import LogOut from 'lucide-react/dist/esm/icons/log-out';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Users from 'lucide-react/dist/esm/icons/users';
+import ImagePlus from 'lucide-react/dist/esm/icons/image-plus';
+import Loader2 from 'lucide-react/dist/esm/icons/loader-2';
+import Trash2 from 'lucide-react/dist/esm/icons/trash-2';
+import ImageIcon from 'lucide-react/dist/esm/icons/image';
+import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
+import Edit2 from 'lucide-react/dist/esm/icons/edit-2';
 import { Logo } from '@/components/ui/Logo';
 
 // Hardcoded users from request

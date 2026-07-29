@@ -1,5 +1,8 @@
 import React from 'react';
-import { Camera, Sunrise, Flame, Bike } from 'lucide-react';
+import Camera from 'lucide-react/dist/esm/icons/camera';
+import Sunrise from 'lucide-react/dist/esm/icons/sunrise';
+import Flame from 'lucide-react/dist/esm/icons/flame';
+import Bike from 'lucide-react/dist/esm/icons/bike';
 
 const experiences = [
   { icon: <Sunrise size={32} />, title: "Sunrise Trek", desc: "Guided early morning treks to witness breathtaking sunrise views over the hills." },

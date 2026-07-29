@@ -3,7 +3,9 @@
 import React from 'react';
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
-import { MapPin, Clock, ArrowRight } from 'lucide-react';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Link from 'next/link';
 
 const locations = [

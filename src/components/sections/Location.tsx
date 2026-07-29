@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Navigation } from 'lucide-react';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Navigation from 'lucide-react/dist/esm/icons/navigation';
 
 export function Location() {
   return (

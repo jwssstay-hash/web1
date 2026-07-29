@@ -2,7 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Users, Heart, Briefcase, Baby } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Heart from 'lucide-react/dist/esm/icons/heart';
+import Briefcase from 'lucide-react/dist/esm/icons/briefcase';
+import Baby from 'lucide-react/dist/esm/icons/baby';
 
 const groups = [
   {

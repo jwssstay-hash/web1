@@ -1,6 +1,8 @@
 import React from 'react';
 import { Logo } from '../ui/Logo';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Phone from 'lucide-react/dist/esm/icons/phone';
+import Mail from 'lucide-react/dist/esm/icons/mail';
 
 export function Footer() {
   return (

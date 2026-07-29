@@ -2,7 +2,17 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ChevronLeft, Check, Info, Users, BedDouble, Ruler, Bath, Wind, Car, Coffee, ShieldAlert } from 'lucide-react';
+import ChevronLeft from 'lucide-react/dist/esm/icons/chevron-left';
+import Check from 'lucide-react/dist/esm/icons/check';
+import Info from 'lucide-react/dist/esm/icons/info';
+import Users from 'lucide-react/dist/esm/icons/users';
+import BedDouble from 'lucide-react/dist/esm/icons/bed-double';
+import Ruler from 'lucide-react/dist/esm/icons/ruler';
+import Bath from 'lucide-react/dist/esm/icons/bath';
+import Wind from 'lucide-react/dist/esm/icons/wind';
+import Car from 'lucide-react/dist/esm/icons/car';
+import Coffee from 'lucide-react/dist/esm/icons/coffee';
+import ShieldAlert from 'lucide-react/dist/esm/icons/shield-alert';
 import { Footer } from '@/components/ui/Footer';
 
 // Rich data model for stays

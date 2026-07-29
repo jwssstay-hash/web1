@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { ZoomIn, Loader2, Play } from 'lucide-react';
+import ZoomIn from 'lucide-react/dist/esm/icons/zoom-in';
+import Loader2 from 'lucide-react/dist/esm/icons/loader-2';
+import Play from 'lucide-react/dist/esm/icons/play';
 
 const CATEGORIES = ["All", "The Farm", "Glass House", "Cottages", "Family Tents", "Camp Tents", "Food", "Stargazing"];
 

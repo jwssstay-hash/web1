@@ -4,7 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { VideoBackground } from "@/components/ui/VideoBackground";
-import { CalendarX2, CalendarDays, MapPin, Phone, Loader2 } from "lucide-react";
+import CalendarX2 from 'lucide-react/dist/esm/icons/calendar-x-2';
+import CalendarDays from 'lucide-react/dist/esm/icons/calendar-days';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Phone from 'lucide-react/dist/esm/icons/phone';
+import Loader2 from 'lucide-react/dist/esm/icons/loader-2';
 
 export default function EventsPage() {
   const [events, setEvents] = useState<any[]>([]);

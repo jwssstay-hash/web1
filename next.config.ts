@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   allowedDevOrigins: ['192.168.1.6', '192.168.1.36'],
 };
 

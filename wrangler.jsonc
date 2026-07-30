@@ -12,5 +12,6 @@
   },
   "build": {
     "command": "npx opennextjs-cloudflare build"
-  }
+  },
+  "minify": true
 }

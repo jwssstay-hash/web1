@@ -1,6 +1,5 @@
-import type { OpenNextConfig } from "@opennextjs/aws/types/open-next.js";
-
-const config: OpenNextConfig = {
+export default {
+  buildCommand: "next build",
   default: {
     override: {
       wrapper: "cloudflare-node",
@@ -24,5 +23,3 @@ const config: OpenNextConfig = {
     },
   },
 };
-
-export default config;

@@ -8,30 +8,24 @@ const firebaseConfig = {
   measurementId: "G-6HQP9HXLJR"
 };
 
-let app: any = null;
-let db: any = null;
-
-if (typeof window !== "undefined") {
-  try {
-    const { initializeApp, getApps, getApp } = require("firebase/app");
-    const { getFirestore } = require("firebase/firestore/lite");
-    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-    db = getFirestore(app);
-  } catch (e) {}
-}
+let cachedApp: any = null;
+let cachedDb: any = null;
 
 export async function getDb() {
-  if (db) return db;
+  if (cachedDb) return cachedDb;
   if (typeof window === "undefined") return null;
   try {
     const { initializeApp, getApps, getApp } = await import("firebase/app");
     const { getFirestore } = await import("firebase/firestore/lite");
-    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-    db = getFirestore(app);
-    return db;
+    
+    cachedApp = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    cachedDb = getFirestore(cachedApp);
+    return cachedDb;
   } catch (e) {
+    console.error("Firebase getDb initialization error:", e);
     return null;
   }
 }
 
-export { app, db };
+export const db: any = null;
+export const app: any = null;

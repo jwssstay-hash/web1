@@ -39,35 +39,34 @@ export function Booking() {
     setStatus('loading');
     
     try {
-      const { db } = await import('@/lib/firebase');
-      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
-
-      await addDoc(collection(db, 'bookings'), {
-        ...formData,
-        stayType: stay,
-        createdAt: serverTimestamp()
-      });
-
-      const message = category === 'Event'
-        ? `*New Event Booking*\n\n*Event:* ${stay}\n*Date:* ${searchParams.get('date') || 'TBD'}\n*Guest Name:* ${formData.name}\n*Contact No:* ${formData.phone}\n*No of Guests:* ${formData.guests}\n*Adults & Kids Details:* ${formData.guestDetails}\n*Interested in Participating:* Yes`
-        : `Hello Woodside Serene! I would like to request a stay booking:\n\n*Name:* ${formData.name}\n*Stay Type:* ${stay}\n*Dates:* ${formData.checkIn} to ${formData.checkOut}\n*Guests:* ${formData.guests}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n\nPlease confirm availability.`;
-      
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=919840741075&text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-
-      setStatus('success');
-      setFormData({ name: '', email: '', phone: '', checkIn: '', checkOut: '', guests: '2', stayType: stay || '', guestDetails: '', interested: false });
-      
-      setTimeout(() => { 
-        setStatus('idle'); 
-        window.location.href = category === 'Event' ? '/events' : '/booking';
-      }, 3000);
-      
+      const { getDb } = await import('@/lib/firebase');
+      const db = await getDb();
+      if (db) {
+        const { collection, addDoc, serverTimestamp } = await import('firebase/firestore/lite');
+        await addDoc(collection(db, 'bookings'), {
+          ...formData,
+          stayType: stay,
+          createdAt: serverTimestamp()
+        });
+      }
     } catch (error) {
-      console.error("Error saving booking: ", error);
-      alert("There was an issue saving your booking. Please try again.");
-      setStatus('error');
+      console.warn("Firestore save skipped or failed, proceeding with WhatsApp booking:", error);
     }
+
+    const message = category === 'Event'
+      ? `*New Event Booking*\n\n*Event:* ${stay}\n*Date:* ${searchParams.get('date') || 'TBD'}\n*Guest Name:* ${formData.name}\n*Contact No:* ${formData.phone}\n*No of Guests:* ${formData.guests}\n*Adults & Kids Details:* ${formData.guestDetails}\n*Interested in Participating:* Yes`
+      : `Hello Woodside Serene! I would like to request a stay booking:\n\n*Name:* ${formData.name}\n*Stay Type:* ${stay}\n*Dates:* ${formData.checkIn} to ${formData.checkOut}\n*Guests:* ${formData.guests}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n\nPlease confirm availability.`;
+    
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=919840741075&text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+
+    setStatus('success');
+    setFormData({ name: '', email: '', phone: '', checkIn: '', checkOut: '', guests: '2', stayType: stay || '', guestDetails: '', interested: false });
+    
+    setTimeout(() => { 
+      setStatus('idle'); 
+      window.location.href = category === 'Event' ? '/events' : '/booking';
+    }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {

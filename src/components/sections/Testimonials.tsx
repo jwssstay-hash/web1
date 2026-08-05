@@ -15,12 +15,17 @@ export function Testimonials() {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const { db } = await import('@/lib/firebase');
-        const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
-        const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
-        const snapshot = await getDocs(q);
-        const fetched = snapshot.docs.map(doc => doc.data());
-        setReviews(fetched.length > 0 ? fetched : fallbackReviews);
+        const { getDb } = await import('@/lib/firebase');
+        const db = await getDb();
+        if (db) {
+          const { collection, getDocs, query, orderBy } = await import('firebase/firestore/lite');
+          const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
+          const snapshot = await getDocs(q);
+          const fetched = snapshot.docs.map(doc => doc.data());
+          setReviews(fetched.length > 0 ? fetched : fallbackReviews);
+        } else {
+          setReviews(fallbackReviews);
+        }
       } catch (error) {
         console.error("Error fetching testimonials", error);
         setReviews(fallbackReviews);

@@ -1,6 +1,3 @@
-// Removed static imports to prevent SSR bundling
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyCIXl8zBAziXl610MX9wbFUfQvO3mwQuQo",
   authDomain: "jwss-stay.firebaseapp.com",
@@ -11,18 +8,30 @@ const firebaseConfig = {
   measurementId: "G-6HQP9HXLJR"
 };
 
-// Firebase is massive and crashes the Cloudflare Worker size limits if bundled on the server.
-// We must ensure Firebase is ONLY initialized on the client side.
 let app: any = null;
 let db: any = null;
 
 if (typeof window !== "undefined") {
-  // We use dynamic require to absolutely prevent server-side bundling of the SDK
-  const { initializeApp, getApps, getApp } = require("firebase/app");
-  const { getFirestore } = require("firebase/firestore/lite");
-  
-  app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-  db = getFirestore(app);
+  try {
+    const { initializeApp, getApps, getApp } = require("firebase/app");
+    const { getFirestore } = require("firebase/firestore/lite");
+    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    db = getFirestore(app);
+  } catch (e) {}
+}
+
+export async function getDb() {
+  if (db) return db;
+  if (typeof window === "undefined") return null;
+  try {
+    const { initializeApp, getApps, getApp } = await import("firebase/app");
+    const { getFirestore } = await import("firebase/firestore/lite");
+    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    db = getFirestore(app);
+    return db;
+  } catch (e) {
+    return null;
+  }
 }
 
 export { app, db };
